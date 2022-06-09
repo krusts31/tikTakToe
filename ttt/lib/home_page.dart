@@ -32,6 +32,7 @@ class _HomePageState extends State<HomePage> {
 	@override
 	Widget build(BuildContext context) {
 		return new Scaffold(
+<<<<<<< HEAD
 			appBar: new AppBar(
 				title: new Text("Tic Tak Toe"),
 			),
@@ -59,5 +60,10 @@ class _HomePageState extends State<HomePage> {
 					),
 				),
 			));
+=======
+			appBar: new AppBar(title: new Text("tic Tac Toe"),
+			), // AppBar
+			body: new Container()); // Scaffold
+>>>>>>> cd687382ce286776bfd45acc609e4a47cdc07f61
 	}
 }
