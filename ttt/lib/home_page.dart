@@ -8,8 +8,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 	List<GameButton> buttonsList = [new GameButton(id: 1)];
-	var player1;
-	var player2;
+	var player1 = [];
+	var player2 = [];
 	var activePlayer;
 
 		@override
@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
 		}
 
 		List<GameButton> doInit() {
-			player1 = new List();
-			player2 = new List();
+			// player1 = new List();
+			// player2 = new List();
 			activePlayer = 1;
 
 			var gameButtons = <GameButton>[
@@ -41,7 +41,15 @@ class _HomePageState extends State<HomePage> {
 			if (activePlayer == 1) {
 				gb.text = "X";
 				gb.bg = Colors.red;
-			}
+        activePlayer = 2;
+        player1.add(gb.id);
+			}else {
+        gb.text = "0";
+        gb.bg = Colors.black;
+        activePlayer = 1;
+        player2.add(gb.id);
+      }
+      gb.enabled = false;
 		});
 	}
 	@override
@@ -65,8 +73,8 @@ class _HomePageState extends State<HomePage> {
 					child: new RaisedButton(
 						padding:  const EdgeInsets.all(8.0),
 						onPressed: buttonsList[i].enabled
-							? () => playGame(buttonList[i])
-							:null,
+							? () => playGame(buttonsList[i])
+							: null,
 						child: new Text(
 							buttonsList[i].text,
 							style: new TextStyle(color: Colors.white, fontSize: 20.0),
