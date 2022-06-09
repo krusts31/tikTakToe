@@ -1,5 +1,6 @@
-flutter -d chrome
-flutter -f macos
+`flutter -d chrome`
+
+`flutter -f macos`
 
 <img width="1197" alt="Screenshot 2022-06-10 at 00 12 41" src="https://user-images.githubusercontent.com/47741591/172955893-5a6e4f8b-dd8e-49eb-b562-510a59193011.png">
 <img width="495" alt="Screenshot 2022-06-10 at 00 12 57" src="https://user-images.githubusercontent.com/47741591/172955897-a5768445-04ac-412a-b888-f2be6516b695.png">
